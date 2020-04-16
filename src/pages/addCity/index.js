@@ -8,7 +8,7 @@ import {
     addCity
 } from '../../reducer/action';
 
-function Login({ add, citys, navigation }) {
+function AddCity({ add, citys, navigation }) {
 
     const [city, setCity] = useState('');   
 
@@ -33,7 +33,7 @@ function Login({ add, citys, navigation }) {
         add(city);
 
         await AsyncStorage.setItem('state', JSON.stringify(citys));
-        navigation.navigate('ListCity');
+        navigation.navigate('Lista');
     }
 
     return(
@@ -68,7 +68,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(AddCity);
 
 const styles = StyleSheet.create({
     container: {

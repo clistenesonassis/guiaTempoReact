@@ -28,7 +28,7 @@ const list = [
 function ListCity({ citys, remove, navigation }) {
 
     function getStatus(city) {
-        navigation.navigate('Consulta',{
+        navigation.navigate('Status',{
             city
         });
     }

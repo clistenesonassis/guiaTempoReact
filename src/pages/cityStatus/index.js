@@ -35,6 +35,7 @@ export default function CityStatus({ navigation }) {
         }).catch(async () => {
             let cache = await AsyncStorage.getItem(city);
             if(cache) {
+                cache = JSON.parse(cache);
                 setData(cache);
             }
         });
